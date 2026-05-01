@@ -68,3 +68,36 @@ p {
         font-size: 3rem;
     }
 }
+
+/* link */
+a {
+    text-decoration: none;
+}
+
+.link-more {
+    color: var(--text-color-gray);
+    font-size: 2rem;
+    font-weight: lighter;
+    opacity: .6;
+}
+
+.link-more::after {
+    content: '...';
+    transition: all 0.15s ease;
+}
+
+.link-more:hover {
+    opacity: 1;
+}
+
+.link-more:hover::after{
+    content: '.....';
+}
+
+@media (min-width: 1024px){
+    .link-more {
+        font-size: 1.5rem;
+    }
+}
+
+/*  */
