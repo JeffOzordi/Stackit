@@ -4,6 +4,15 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary-color-light: #FFCAE8;
+    --primary-color: #F59CCA;
+    --primary-color-dark: #CD5583;
+    --text-color-light: #FCF6FB;
+    --bg-color: hsl(0, 4%, 86%);
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 html {
     font-size: 62.5%;
 }
