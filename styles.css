@@ -4,19 +4,67 @@
     box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 :root {
     --primary-color-light: #FFCAE8;
     --primary-color: #F59CCA;
     --primary-color-dark: #CD5583;
     --secondary-color: #;
     --accent-color: #;
-    --text-color-headings: #;
+    --text-color-headings: #1b0760;
     --text-color-light: #FCF6FB;
-    --text-color-dark: #;
-    --bg-color: #918CA4;
+    --text-color-gray: #918CA4;
+    --bg-color: #;
     --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 html {
     font-size: 62.5%;
+}
+
+body {
+  font-family: "Nunito", sans-serif;  
+  font-size: 2.4rem;
+  line-height: 1.4;
+  color: var(--text-color-gray);  
+}
+
+h1,
+h2,
+h3 {
+    color: var(--text-color-headings);
+}
+
+h1 {
+    font-size: 6rem;
+}
+
+h2 {
+    font-size: 3.5rem;
+}
+
+h3 {
+    font-size: 2.8rem;
+}
+
+p {
+    margin-top: 0;
+}
+
+@media (min-width: 1024px) {
+    body{
+        font-size: 1.8rem;
+    }
+
+    h1 {
+    font-size: 6.5rem;
+    }
+
+    h2 {
+        font-size: 4rem;
+    }
+
+    h3 {
+        font-size: 3rem;
+    }
 }
