@@ -8,8 +8,12 @@
     --primary-color-light: #FFCAE8;
     --primary-color: #F59CCA;
     --primary-color-dark: #CD5583;
+    --secondary-color: #;
+    --accent-color: #;
+    --text-color-headings: #;
     --text-color-light: #FCF6FB;
-    --bg-color: hsl(0, 4%, 86%);
+    --text-color-dark: #;
+    --bg-color: #918CA4;
     --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
