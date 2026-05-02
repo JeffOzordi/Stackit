@@ -163,6 +163,13 @@ a {
     border-radius: 50%;
 }
 
+.icon--outline {
+    background-color: transparent;
+    color: var(--primary-color-dark);
+    border: 3px solid var(--primary-color-dark);
+    border-radius: 50%;
+}
+
 /* buttons */
 .btn {
     border: none;
@@ -276,4 +283,32 @@ a {
         margin-left: 5px;
         justify-self: start
      }
+}
+
+/* collapasible */
+.collapsible__header {
+    display: flex ;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.collapsible__icon {
+    cursor: pointer;
+    transform: rotate(0);
+    transition: all 0.2s ease;
+}
+
+.collapsible__content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.collapsible--expanded  .collapsible__icon{
+    transform: rotate(180deg);
+}
+.collapsible--expanded  .collapsible__content{
+    max-height: 100%;
+    opacity: 1;
 }
