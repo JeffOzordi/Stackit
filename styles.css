@@ -164,3 +164,48 @@ a {
     border-radius: 50%;
 }
 
+/* buttons */
+.btn {
+    border: none;
+    padding: .5rem 1rem;
+    border-radius: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    white-space: nowrap;
+    text-align: center;
+    margin: 1rem 0;
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--box-shadow);
+}
+
+.btn--primary {
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+}
+
+.btn--outline {
+    background-color: transparent;
+    border: 3px solid var(--primary-color-dark);
+    color: var(--primary-color-dark);
+}
+
+.btn--primary-dark {
+    background-color: var(--primary-color-dark);
+    color: var(--text-color-light);
+}
+
+.btn--block {
+    width: 100%;
+    display: inline-block;
+}
+
+@media (min-width: 1024px) {
+    .btn {
+        font-size: 1.5rem;
+    }
+}
