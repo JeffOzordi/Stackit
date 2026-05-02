@@ -11,6 +11,7 @@
     --primary-color-dark: #CD5583;
     --secondary-color: #;
     --accent-color: #;
+    --good-color: #0cdc16;
     --text-color-headings: #1b0760;
     --text-color-light: #FCF6FB;
     --text-color-gray: #918CA4;
@@ -122,8 +123,25 @@ a {
     .badge {
         font-size: 1.5rem;
     }
-    
+
     .badge--small {
         font-size: 1rem;
     }
+}
+
+/*  lists  */
+.list {
+    list-style: none;
+    color: var(--text-color-headings );
+}
+
+.list--inline .list__item {
+    display: inline-block;
+    margin-right: 2rem;
+}
+
+.list--tick .list__item::before {
+    content: '\2714';
+    color: var(--good-color);
+    padding-right: 10px;
 }
