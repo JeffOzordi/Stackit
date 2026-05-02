@@ -25,12 +25,7 @@ html {
     font-size: 62.5%;
 }
 
-body {
-    background: url(./img/bg-pink_donught_side.jpg);
-    height: 100vh;
-    width: 100vw;
-    background-position: center;
-    background-repeat: no-repeat;
+body { 
     font-family: "Nunito", sans-serif;  
     font-size: 2.4rem;
     line-height: 1.4;
@@ -41,6 +36,8 @@ h1,
 h2,
 h3 {
     color: var(--text-color-headings);
+    line-height: 1.1;
+    margin-bottom: 1.8rem;
 }
 
 h1 {
@@ -178,7 +175,7 @@ a {
 /* buttons */
 .btn {
     border: none;
-    padding: .5rem 1rem;
+    padding: 1rem 1.5rem;
     border-radius: 20px;
     font-size: 2rem;
     font-weight: bold;
@@ -201,13 +198,24 @@ a {
 
 .btn--outline {
     background-color: transparent;
-    border: 3px solid var(--primary-color-dark);
     color: var(--primary-color-dark);
+    border: 3px solid var(--primary-color-dark);
+    transition: all 0.3s ease;
+}
+.btn--outline:hover {
+    background-color: var(--primary-color-dark);
+    color: var(--text-color-light);
 }
 
 .btn--primary-dark {
     background-color: var(--primary-color-dark);
     color: var(--text-color-light);
+    transition: all 0.3s ease;
+}
+.btn--primary-dark:hover {
+    background-color: transparent;
+    color: var(--primary-color-dark);
+    border: 3px solid var(--primary-color-dark);
 }
 
 .btn--block {
@@ -242,6 +250,7 @@ a {
 /* grid */
 .grid {
     display: grid;
+    gap: 8rem;
 }
 
 @media (min-width: 768px) {
@@ -324,7 +333,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: .5rem 1rem         ;
+    padding: .5rem;
     position: sticky;
     top: 2%;
     z-index: 1000;
@@ -351,11 +360,13 @@ a {
     border-bottom: 1px solid var(--text-color-gray);
 }
 .nav__item a {
+    font-size: 1.8rem;
+    font-weight: bold;
     color: var(--primary-color-dark);
     transition: all 0.2s ease;
 }
 .nav__item a:hover {
-    color: var(--primary-color-light);
+    color: var(--primary-color);
 }
 
 .logo {
@@ -392,5 +403,99 @@ a {
 
     .nav__item {
         border: none; 
+    }
+}
+
+/* hero */
+.hero__container {
+    background: linear-gradient(130deg, var(--primary-color), var(--primary-color-light));
+    /* background: url(./img/bg-pink_donught_side.jpg); */
+    min-height: 119vh;
+    width: 100%;
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+    padding: 2rem 3rem;
+}
+
+.skew-left {
+    padding-bottom: calc(var(--padding-vertical) + 4rem);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+}
+
+.container {
+    margin-top: 4rem;
+    min-height: 80vh;
+}
+
+.hero__content {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: column;
+    text-align: center;
+}
+
+.block__heading {
+    color: var(--text-color-light);
+    
+}
+
+.hero__tagline {
+    margin: 2rem 0 4rem;
+}
+
+.hero__image-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.hero__image {
+    width: 104px;
+    height: 100px;
+    border-radius: 50%;
+    margin: .8rem;
+    animation: float 2s infinite;
+}
+.hero__image2 {
+    width: 104px;
+    height: 100px;
+    border-radius: 50%;
+    margin: .8rem;
+    animation: float2 2s infinite;
+}
+/* look for cooler animations */
+@keyframes float     {
+    0%{
+        transform: translateY(-20px);
+    }
+
+    50%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(-20px);
+    }
+}
+@keyframes float2     {
+    0%{
+        transform: translateY(0px);
+    }
+
+    50%{
+        transform: translateY(-20px);
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+@media (min-width: 768px) {
+    .hero__content {
+        text-align: left;
+        align-self: center;
     }
 }
