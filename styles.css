@@ -26,10 +26,15 @@ html {
 }
 
 body {
-  font-family: "Nunito", sans-serif;  
-  font-size: 2.4rem;
-  line-height: 1.4;
-  color: var(--text-color-gray);  
+    background: url(./img/bg-pink_donught_side.jpg);
+    height: 100vh;
+    width: 100vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: "Nunito", sans-serif;  
+    font-size: 2.4rem;
+    line-height: 1.4;
+    color: var(--text-color-gray);  
 }
 
 h1,
@@ -308,7 +313,84 @@ a {
 .collapsible--expanded  .collapsible__icon{
     transform: rotate(180deg);
 }
+
 .collapsible--expanded  .collapsible__content{
     max-height: 100%;
     opacity: 1;
+}
+
+/* navbars */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 1rem         ;
+    position: sticky;
+    top: 2%;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.1); /* transparency */
+    backdrop-filter: blur(10px);           /* glass effect */
+    -webkit-backdrop-filter: blur(10px);   /* Safari support */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* subtle edge */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+
+    width: 100%;
+    max-width: auto;
+    border-radius: 50px;
+}
+
+.nav__list {
+    width: 100%;
+}
+
+.nav__item {
+    text-align: center;
+    padding: .5rem ;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--text-color-gray);
+}
+.nav__item a {
+    color: var(--primary-color-dark);
+    transition: all 0.2s ease;
+}
+.nav__item a:hover {
+    color: var(--primary-color-light);
+}
+
+.logo {
+    height: 60px;
+    width: 120px;
+    border-radius: 40px;
+}
+
+.nav__toggler {
+    opacity: 1;
+}
+
+.nav.collapsible--expanded .nav__toggler {
+    opacity: .7;
+    box-shadow: var(--box-shadow);
+}
+
+@media (min-width: 768px) {
+    .nav__toggler{
+        display: none;
+    }
+
+    .nav__list {
+        width: auto;
+        display: flex;
+        gap: 2.5rem;
+    }
+
+    .collapsible__content {
+        max-height: 100%;
+        opacity: 1;
+        overflow: visible;
+    }
+
+    .nav__item {
+        border: none; 
+    }
 }
