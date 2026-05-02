@@ -203,6 +203,11 @@ a {
     display: inline-block;
 }
 
+.btn--stretch {
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
 @media (min-width: 1024px) {
     .btn {
         font-size: 1.5rem;
@@ -236,4 +241,39 @@ a {
     .grid--1x3 {
         grid-template-columns: repeat(3, 1fr);
     }
+}
+
+/* callout */
+.callout {
+    padding: 2rem;
+    border-radius:  10px ;
+}
+
+.callout--primary {
+    background: var(--primary-color);
+    color: var(--text-color-light);
+}
+
+.callout__content {
+    text-align: center;
+}
+
+.callout .btn {
+    justify-self: center;
+    align-self  : center;
+}
+
+@media (min-width:768px) {
+    .callout .grid--1x2 {
+        grid-template-columns: 1fr auto ;
+    }
+
+     .callout__content {
+        text-align: left;
+     }
+
+     .callout .btn {
+        margin-left: 5px;
+        justify-self: start
+     }
 }
