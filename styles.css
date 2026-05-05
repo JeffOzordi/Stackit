@@ -54,6 +54,7 @@ h3 {
 }
 
 p {
+    font-size: 2.1rem;
     margin-top: 0;
 }
 
@@ -80,6 +81,11 @@ a {
     text-decoration: none;
 }
 
+.link-container {
+    text-align: right;
+
+}
+
 .link-more {
     color: var(--text-color-gray);
     font-size: 2rem;
@@ -102,7 +108,7 @@ a {
 
 @media (min-width: 1024px){
     .link-more {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
 }
 
@@ -116,7 +122,7 @@ a {
 }
 
 .badge--small {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 .badge--primary {
@@ -126,6 +132,10 @@ a {
 .badge--primary-dark {
     background-color: var(--primary-color-dark);
     color: #fff;
+}
+.badge--outline {
+    border: 2px solid var(--primary-color-dark);
+    color: var(--primary-color-dark);
 }
 
 @media (min-width: 1024px) {
@@ -348,7 +358,6 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* padding: .2rem; */
     position: sticky;
     top: 1rem;
     z-index: 1000;
@@ -358,11 +367,14 @@ a {
     border: 1px solid rgba(255, 255, 255, 0.2); /* subtle edge */
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     flex-wrap: wrap;
-
-    width: 100%;
-    max-width: auto;
-    /* max-height: 63.5px; */
+    margin: 0 auto;  
+    width: 90%;
     border-radius: 50px;
+}
+
+.nav_cover {
+    width: 100%;
+    background-color: var(--primary-color);
 }
 
 .nav__list {
@@ -426,8 +438,7 @@ a {
 /* hero */
 .hero__container {
     background: linear-gradient(130deg, var(--primary-color), var(--primary-color-light));
-    /* background: url(./img/bg-pink_donught_side.jpg); */
-    min-height: 119vh;
+    height: 95vh;
     width: 100%;
     object-fit: cover;
     background-position: center;
@@ -459,9 +470,14 @@ a {
     }
     
 }
-.skew-left {
+.skew-bottom-right {
     padding-bottom: calc(var(--padding-vertical) + 4rem);
     clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+}
+
+.skew-top-left {
+    padding-top: calc(var(--padding-vertical) + 4rem);
+    clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 100%);
 }
 
 .container {
@@ -544,10 +560,11 @@ a {
 /* about founder */  
 .card__container {
     padding: 2rem 3rem;
+    min-height: 90vh;
 }
 
 .card {
-    box-shadow: 0 4px 8px var(--primary-color);
+    box-shadow: 0 8px 16px var(--primary-color);
     border-radius: 20px;
 }
 
@@ -555,6 +572,24 @@ a {
     padding: 2rem;
 }
 
+.founder-name__badge:hover {
+    animation: pulse 1.4s infinite;
+}
+
+@keyframes pulse {
+    0%{
+        box-shadow: 0 0 0 0 rgba(205, 85, 131, 0.7);
+    }
+
+    70%{
+        box-shadow: 0 0 0 10px rgba(74, 222, 128, 0);
+    }
+
+    100%{
+        box-shadow: 0 0 0 0 rgba(74, 222, 128, 0);
+
+    }
+}
 .founder_img  {
     position: relative;
 }
@@ -657,7 +692,7 @@ a {
     .founder_img .badge {
         font-size: 2rem;
         position: absolute;
-        bottom: 0rem;
+        bottom: .8rem;
         left: 50px;
         transform: rotate(-10deg);
     }
@@ -669,4 +704,83 @@ a {
     .founder__quote {
         font-size: 2.2rem;
     }
+}
+
+/* meals */
+.menu__container {
+    background: url(./resources/afa5d5a3e6700941fe053ce2370b5cb8.jpg);
+    min-height: 95vh;
+    width: 100%;
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+    padding: 6rem 3rem 2rem 3rem;
+
+}
+/* Heading */
+.heading {
+    text-align: center;
+    margin-bottom: 2rem
+}
+
+.heading h3 {
+    margin-bottom: 1.8rem;
+    background: linear-gradient(90deg, var(--primary-color-light), var(--primary-color));
+    border-bottom: 2px solid var(--primary-color);
+    display: inline-block;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.meal-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(332px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.meal {
+    background-color: var(--card-bg);
+    border-radius: 20px;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    overflow: hidden;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.meal:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.meal img {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+}
+
+.meal-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    
+    background: rgba(255, 255, 255, 0.95);
+    padding: .5rem;
+
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+}
+
+/* Show on hover */
+.meal:hover .meal-info {
+    transform: translateY(0);
+}
+
+.meal-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: .8rem;
 }
