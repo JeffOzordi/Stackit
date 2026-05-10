@@ -319,7 +319,7 @@ a {
 
 /* callout */
 .callout {
-    padding: 2rem;
+    padding: 2rem;  
     color: var(--text-color-light);
 }
 
@@ -635,7 +635,7 @@ a {
 /* about founder */  
 .about__container {
     padding: 2rem 3rem;
-    min-height: 80vh;
+    /* min-height: 80vh; */
     background-color: #FCF6FB;
 }
 
@@ -1199,4 +1199,17 @@ li {
     .testimonial__image-container{
         max-height: 400px;
     }
+}
+
+.info-item a {
+    color: var(--text-color-light);
+    transition: all 0.2s ease;
+}
+
+.info-item a:hover {
+    color: var(--primary-color-light);
+}
+
+.primary-dark {
+    color: var(--primary-color-dark);
 }
