@@ -1083,7 +1083,7 @@ li {
     top: 1rem;
     right: 1rem;
     background-color: var(--primary-color-dark);
-    color: #000;
+    color: #FCF6FB;
     font-size: .8rem;
     font-weight: bold;
     padding: .5rem .9rem;
@@ -1207,7 +1207,7 @@ li {
 }
 
 .info-item a:hover {
-    color: var(--primary-color-light);
+    color: var(--primary-color-dark);
 }
 
 .primary-dark {
